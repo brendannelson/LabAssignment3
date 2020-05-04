@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "LabAssignment4NoCap": {
+    "LabAssignment4": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/LabAssignment3",
+            "outputPath": "dist/LabAssignment4",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "LabAssignment3:build"
+            "browserTarget": "LabAssignment4:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "LabAssignment3:build:production"
+              "browserTarget": "LabAssignment4:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "LabAssignment3:build"
+            "browserTarget": "LabAssignment4:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "LabAssignment3:serve"
+            "devServerTarget": "LabAssignment4:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "LabAssignment3:serve:production"
+              "devServerTarget": "LabAssignment4:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "LabAssignment3"
+  "defaultProject": "LabAssignment4"
 }
