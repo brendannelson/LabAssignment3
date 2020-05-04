@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 interface IStudent {
-  id?: number;
+  id: number;
   firstName: string;
   lastName: string;
   course: string;
@@ -14,45 +14,45 @@ interface IStudent {
 })
 export class MainContentComponent implements OnInit {
 
-  students: Array<IStudent> = [];
-  constructor() {
-    this.students[0] = {
+
+  studentArray: Array<IStudent> = [];
+  constructor() { }
+
+  ngOnInit() {
+    this.studentArray = [
+      {
+        id: 1,
+        firstName: 'Brendan',
+        lastName: 'Nelson',
+        course: 'Programming'
+      },
+      {
+        id: 2,
+        firstName: 'Mike',
+        lastName: 'Tyson',
+        course: 'Boxing'
+      },
+      {
+        id: 3,
+        firstName: 'Mohammed',
+        lastName: 'Ali',
+        course: 'Super Boxing'
+      }
+    ];
+  }
+
+  addStudent() {
+    this.studentArray.unshift({
       id: 1,
       firstName: 'Brendan',
       lastName: 'Nelson',
       course: 'Programming'
-    }
-    this.students[1] = {
-      id: 1,
-      firstName: 'Tom',
-      lastName: 'Brady',
-      course: 'Swimming'
-    }
-    this.students[2] = {
-      id: 1,
-      firstName: 'Mark',
-      lastName: 'Zuc',
-      course: 'Business'
-    }
-    this.students[3] = {
-      id: 1,
-      firstName: 'Joe',
-      lastName: 'Biden',
-      course: 'Politics'
-    }
-   }
-
-  ngOnInit() {
+    });
   }
 
-  addStudent() {
-    const student:IStudent = {
-      id: 1,
-      firstName: 'Mike',
-      lastName: 'Tyson',
-      course: 'Boxing'
-    };
-
-    this.students.push(student);
+  removeStudent(index: number) {
+    console.log('index', index);
+    this.studentArray.splice(index, 1);
   }
+
 }

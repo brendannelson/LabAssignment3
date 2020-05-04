@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LabAssignment3';
+  title = 'LabAssignment4';
+
+    private firstName = 'Brendan';
+    private lastName = 'Nelson';
+  
+
+    showGreeting() {
+        const row2 = document.getElementById("R1C2");
+        row2.innerHTML = 'Hello ' + this.firstName + ' ' + this.lastName + '.';
+}
+
+    resetGreeting() {
+        const row2 = document.getElementById("R1C2");
+        row2.innerHTML = "R1C2";
+    }
+
+
 }

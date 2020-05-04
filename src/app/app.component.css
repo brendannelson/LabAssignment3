@@ -1,21 +1,29 @@
-.app-container-grid {
+
+.main-container {
     display: grid;
-    grid-template-rows: 1fr 7fr 1fr;
-    height: 100vw;
+    height: 100%;
+    grid-template-rows: 1fr 12fr 1fr;
 }
-/* .main-header,
-.main-footer {
-    background-color: #9d9b9b;
+
+/* .row-one,.row-two,.row-three {
     display: grid;
-    grid-template-columns: 1fr 6fr 2fr;
+    grid-template-columns: 1fr 5fr 2fr;
+    background-color: rgb(60, 77, 170);
 } */
 
-/* .main-container-grid {
+/* .row-two {
     display: grid;
-    grid-template-columns: 1fr 6fr 2fr;
+    grid-template-columns: 1fr 5fr 2fr;
+    background-color: rgb(27, 37, 129);
+} */
+/* .row-three {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    background-color: rgb(12, 14, 100);
 } */
 
-/* .align-center {
-    margin: 15px;
-    border: 1px dashed #CCC;
-} */
+.container-padding { 
+    margin: 12px;
+    border: 1px dashed yellow;
+    
+}
