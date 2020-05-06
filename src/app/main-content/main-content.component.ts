@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-interface IStudent {
-  id: number;
-  firstName: string;
-  lastName: string;
-  course: string;
-}
+
 
 @Component({
   selector: 'main-content',
@@ -14,45 +9,7 @@ interface IStudent {
 })
 export class MainContentComponent implements OnInit {
 
-
-  studentArray: Array<IStudent> = [];
   constructor() { }
 
-  ngOnInit() {
-    this.studentArray = [
-      {
-        id: 1,
-        firstName: 'Brendan',
-        lastName: 'Nelson',
-        course: 'Programming'
-      },
-      {
-        id: 2,
-        firstName: 'Mike',
-        lastName: 'Tyson',
-        course: 'Boxing'
-      },
-      {
-        id: 3,
-        firstName: 'Mohammed',
-        lastName: 'Ali',
-        course: 'Super Boxing'
-      }
-    ];
-  }
-
-  addStudent() {
-    this.studentArray.unshift({
-      id: 1,
-      firstName: 'Brendan',
-      lastName: 'Nelson',
-      course: 'Programming'
-    });
-  }
-
-  removeStudent(index: number) {
-    console.log('index', index);
-    this.studentArray.splice(index, 1);
-  }
-
+  ngOnInit() {}
 }
